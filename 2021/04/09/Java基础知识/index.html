@@ -5,7 +5,7 @@
 @font-face {
  font-family: 'JetBrains Mono';
  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
-}</style><meta name="generator" content="Hexo 5.3.0"></head><body><header><nav><a href="/">主页</a><a href="/archives/">归档</a></nav></header><main><article><div id="post-bg"><div id="post-title"><div id="post-info"><span>date:<time datetime="2021-04-09T06:55:48.000Z" id="date"> 2021-04-09</time></span><br><span>updated:<time datetime="2021-04-09T07:28:04.205Z" id="updated"> 2021-04-09</time></span></div><h1>Java基础知识</h1><hr></div><div id="post-content"><blockquote>
+}</style><meta name="generator" content="Hexo 5.3.0"></head><body><header><nav><a href="/">主页</a><a href="/archives/">归档</a></nav></header><main><article><div id="post-bg"><div id="post-title"><div id="post-info"><span>date:<time datetime="2021-04-09T06:55:48.000Z" id="date"> 2021-04-09</time></span><br><span>updated:<time datetime="2021-04-09T07:37:24.145Z" id="updated"> 2021-04-09</time></span></div><h1>Java基础知识</h1><hr></div><div id="post-content"><blockquote>
 <p><a target="_blank" rel="noopener" href="https://github.com/Snailclimb/JavaGuide/blob/09216a6916cfe94765919a17d93c22a5cc286c42/docs/java/basis/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md">原文地址</a>，此处仅作展示！</p>
 </blockquote>
 </li>
@@ -29,7 +29,7 @@
 <p>在 Java 中，JVM 可以理解的代码就叫做<code>字节码</code>（即扩展名为 <code>.class</code> 的文件），它不面向任何特定的处理器，只面向虚拟机。Java 语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了解释型语言可移植的特点。所以 Java 程序运行时比较高效，而且，由于字节码并不针对一种特定的机器，因此，Java 程序无须重新编译便可在多种不同操作系统的计算机上运行。</p>
 </blockquote>
 <p><strong>Java 程序从源代码到运行一般有下面 3 步：</strong></p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/Java%20%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E8%BF%87%E7%A8%8B.png" alt="Java程序运行过程"></p>
+<p><img src="https://ae05.alicdn.com/kf/H4774a74cf4864ffbaa594da96c602ca8f.png" alt="Java程序运行过程"></p>
 <p>我们需要格外注意的是 .class-&gt;机器码 这一步。在这一步 JVM 类加载器首先加载字节码文件，然后通过解释器逐行解释执行，这种方式的执行速度会相对比较慢。而且，有些方法和代码块是经常需要被调用的(也就是所谓的热点代码)，所以后面引进了 JIT 编译器，而 JIT 属于运行时编译。当 JIT 编译器完成第一次编译后，其会将字节码对应的机器码保存下来，下次可以直接使用。而我们知道，机器码的运行效率肯定是高于 Java 解释器的。这也解释了我们为什么经常会说 Java 是编译与解释共存的语言。</p>
 <blockquote>
 <p>HotSpot 采用了惰性评估(Lazy Evaluation)的做法，根据二八定律，消耗大部分系统资源的只有那一小部分的代码（热点代码），而这也就是 JIT 所需要编译的部分。JVM 会根据代码每次被执行的情况收集信息并相应地做出一些优化，因此执行的次数越多，它的速度就越快。JDK 9 引入了一种新的编译模式 AOT(Ahead of Time Compilation)，它是直接将字节码编译成机器码，这样就避免了 JIT 预热等各方面的开销。JDK 支持分层编译和 AOT 协作使用。但是 ，AOT 编译器的编译质量是肯定比不上 JIT 编译器的。</p>
@@ -409,7 +409,7 @@
 <p><strong>结果：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
 <p><strong>解析：</strong></p>
-<p><img src="https://ae04.alicdn.com/kf/H5a2e1c7b96404e5a825030f0305b444cX.png" alt="example 2"></p>
+<p><img src="https://ae03.alicdn.com/kf/Hf83a174b31ad4779b3c3a0d15beb0c22o.png" alt="example 2"></p>
 <p>array 被初始化 arr 的拷贝也就是一个对象的引用，也就是说 array 和 arr 指向的是同一个数组对象。 因此，外部对引用对象的改变会反映到所对应的对象上。</p>
 <p><strong>通过 example2 我们已经看到，实现一个改变对象参数状态的方法并不是一件难事。理由很简单，方法得到的是对象引用的拷贝，对象引用及其他的拷贝同时引用同一个对象。</strong></p>
 <p><strong>很多程序设计语言（特别是，C++和 Pascal)提供了两种参数传递的方式：值调用和引用调用。有些程序员（甚至本书的作者）认为 Java 程序设计语言对对象采用的是引用调用，实际上，这种理解是不对的。由于这种误解具有一定的普遍性，所以下面给出一个反例来详细地阐述一下这个问题。</strong></p>
@@ -421,9 +421,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x:小李</span><br><span class="line">y:小张</span><br><span class="line">s1:小张</span><br><span class="line">s2:小李</span><br></pre></td></tr></table></figure>
 <p><strong>解析：</strong></p>
 <p>交换之前：</p>
-<p><img src="https://ae01.alicdn.com/kf/Hc787c12e40e44369beeea01f82139bdeR.png"></p>
+<p><img src="https://ae01.alicdn.com/kf/H03fdb5895beb43cfb5f5be87cab0893b8.png"></p>
 <p>交换之后：</p>
-<p><img src="https://ae05.alicdn.com/kf/Hc7cf58abecdd41a3bd6cc4f0b00aefe5E.png"></p>
+<p><img src="https://ae04.alicdn.com/kf/H97a33f302fc34f0daa7f66eefa69f3b3n.png"></p>
 <p>通过上面两张图可以很清晰的看出： <strong>方法并没有改变存储在变量 s1 和 s2 中的对象引用。swap 方法的参数 x 和 y 被初始化为两个对象引用的拷贝，这个方法交换的是这两个拷贝</strong></p>
 <blockquote>
 <p><strong>总结</strong></p>
