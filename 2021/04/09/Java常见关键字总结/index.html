@@ -5,7 +5,7 @@
 @font-face {
  font-family: 'JetBrains Mono';
  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
-}</style><meta name="generator" content="Hexo 5.3.0"></head><body><header><nav><a href="/">主页</a><a href="/archives/">归档</a></nav></header><main><article><div id="post-bg"><div id="post-title"><div id="post-info"><span>date:<time datetime="2021-04-09T08:19:20.000Z" id="date"> 2021-04-09</time></span><br><span>updated:<time datetime="2021-04-09T08:31:47.285Z" id="updated"> 2021-04-09</time></span></div><h1>Java常见关键字总结</h1><hr></div><div id="post-content"><blockquote>
+}</style><meta name="generator" content="Hexo 5.3.0"></head><body><header><nav><a href="/">主页</a><a href="/archives/">归档</a></nav></header><main><article><div id="post-bg"><div id="post-title"><div id="post-info"><span>date:<time datetime="2021-04-09T08:19:20.000Z" id="date"> 2021-04-09</time></span><br><span>updated:<time datetime="2021-04-09T08:56:30.388Z" id="updated"> 2021-04-09</time></span></div><h1>Java常见关键字总结</h1><hr></div><div id="post-content"><blockquote>
 <p><a target="_blank" rel="noopener" href="https://github.com/Snailclimb/JavaGuide/blob/master/docs/java/basis/Java%E5%B8%B8%E8%A7%81%E5%85%B3%E9%94%AE%E5%AD%97%E6%80%BB%E7%BB%93.md">原文地址</a>，此处仅作展示！</p>
 </blockquote>
 </li>
@@ -45,10 +45,9 @@
 </ul>
 <p><strong>简单解释一下：</strong></p>
 <p>被 static 修饰的成员属于类，不属于单个这个类的某个对象，被类中所有对象共享。而 this 代表对本类对象的引用，指向本类对象；而 super 代表对父类对象的引用，指向父类对象；所以， <strong>this和super是属于对象范畴的东西，而静态方法是属于类范畴的东西</strong>。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.codejava.net/java-core/the-java-language/java-keywords">https://www.codejava.net/java-core/the-java-language/java-keywords</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u013393958/article/details/79881037">https://blog.csdn.net/u013393958/article/details/79881037</a></li>
-</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.codejava.net/java-core/the-java-language/java-keywords">www.codejava.net</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u013393958/article/details/79881037">blog.csdn.net</a></p>
+</blockquote>
 <h1 id="static-关键字详解"><a href="#static-关键字详解" class="headerlink" title="static 关键字详解"></a>static 关键字详解</h1><h2 id="static-关键字主要有以下四种使用场景"><a href="#static-关键字主要有以下四种使用场景" class="headerlink" title="static 关键字主要有以下四种使用场景"></a>static 关键字主要有以下四种使用场景</h2><ol>
 <li>修饰成员变量和成员方法</li>
 <li>静态代码块</li>
@@ -114,11 +113,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">静态代码块！--非静态代码块！--默认构造方法！--</span><br></pre></td></tr></table></figure>
 
 <p>非静态代码块与构造函数的区别是： 非静态代码块是给所有对象进行统一初始化，而构造函数是给对应的对象初始化，因为构造函数是可以多个的，运行哪个构造函数就会建立什么样的对象，但无论建立哪个对象，都会先执行相同的构造代码块。也就是说，构造代码块中定义的是不同对象共性的初始化内容。 </p>
-<h3 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h3><ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/chen13579867831/article/details/78995480">https://blog.csdn.net/chen13579867831/article/details/78995480</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chenssy/p/3388487.html">https://www.cnblogs.com/chenssy/p/3388487.html</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Qian123/p/5713440.html">https://www.cnblogs.com/Qian123/p/5713440.html</a></li>
-</ul><div id="paginator"></div></div><div id="post-footer"><hr><a href="/2021/04/09/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">Java基础知识 Next →</a><hr></div><div id="bottom-btn"><a id="to-index" href="#post-index" title="index">≡</a><a id="to-top" href="#post-title" title="to top">∧</a></div><details id="reward"><summary>打赏</summary><div id="alipay"><span>支付宝 | Alipay</span><br><img src="/img/Alipay.png"></div><div id="wechat"><span>微信 | WeChat</span><br><img src="/img/WeChat.png"></div></details><div id="Valine"></div><script>new Valine({
+<h3 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/chen13579867831/article/details/78995480">blog.csdn.net</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chenssy/p/3388487.html">chenssy</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Qian123/p/5713440.html">Qian123</a></p>
+</blockquote><div id="paginator"></div></div><div id="post-footer"><hr><a href="/2021/04/09/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">Java基础知识 Next →</a><hr></div><div id="bottom-btn"><a id="to-index" href="#post-index" title="index">≡</a><a id="to-top" href="#post-title" title="to top">∧</a></div><details id="reward"><summary>打赏</summary><div id="alipay"><span>支付宝 | Alipay</span><br><img src="/img/Alipay.png"></div><div id="wechat"><span>微信 | WeChat</span><br><img src="/img/WeChat.png"></div></details><div id="Valine"></div><script>new Valine({
  el: '#Valine'
  , appId: 'iimRpHPvB3n3J1iBrHEAk4lr-gzGzoHsz'
  , appKey: 'cv8sEd0lgm1AGe0MHAsYoK9e'

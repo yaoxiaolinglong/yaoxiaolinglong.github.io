@@ -5,7 +5,7 @@
 @font-face {
  font-family: 'JetBrains Mono';
  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
-}</style><meta name="generator" content="Hexo 5.3.0"></head><body><header><nav><a href="/">主页</a><a href="/archives/">归档</a></nav></header><main><article><div id="post-bg"><div id="post-title"><div id="post-info"><span>date:<time datetime="2021-04-09T06:55:48.000Z" id="date"> 2021-04-09</time></span><br><span>updated:<time datetime="2021-04-09T08:28:34.859Z" id="updated"> 2021-04-09</time></span></div><h1>Java基础知识</h1><hr></div><div id="post-content"><blockquote>
+}</style><meta name="generator" content="Hexo 5.3.0"></head><body><header><nav><a href="/">主页</a><a href="/archives/">归档</a></nav></header><main><article><div id="post-bg"><div id="post-title"><div id="post-info"><span>date:<time datetime="2021-04-09T06:55:48.000Z" id="date"> 2021-04-09</time></span><br><span>updated:<time datetime="2021-04-09T09:05:52.328Z" id="updated"> 2021-04-09</time></span></div><h1>Java基础知识</h1><hr></div><div id="post-content"><blockquote>
 <p><a target="_blank" rel="noopener" href="https://github.com/Snailclimb/JavaGuide/blob/09216a6916cfe94765919a17d93c22a5cc286c42/docs/java/basis/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md">原文地址</a>，此处仅作展示！</p>
 </blockquote>
 </li>
@@ -21,7 +21,7 @@
 <li>编译与解释并存；</li>
 </ol>
 <blockquote>
-<p>修正（参见： <a target="_blank" rel="noopener" href="https://github.com/Snailclimb/JavaGuide/issues/544">issue#544</a>）：C++11 开始（2011 年的时候）,C++就引入了多线程库，在 windows、linux、macos 都可以使用<code>std::thread</code>和<code>std::async</code>来创建线程。参考链接：<a target="_blank" rel="noopener" href="http://www.cplusplus.com/reference/thread/thread/?kw=thread">http://www.cplusplus.com/reference/thread/thread/?kw=thread</a></p>
+<p>修正（参见： <a target="_blank" rel="noopener" href="https://github.com/Snailclimb/JavaGuide/issues/544">issue#544</a>）：C++11 开始（2011 年的时候）,C++就引入了多线程库，在 windows、linux、macos 都可以使用<code>std::thread</code>和<code>std::async</code>来创建线程。参考链接：<a target="_blank" rel="noopener" href="http://www.cplusplus.com/reference/thread/thread/?kw=thread">www.cplusplus.com</a></p>
 </blockquote>
 <h4 id="1-1-2-关于-JVM-JDK-和-JRE-最详细通俗的解答"><a href="#1-1-2-关于-JVM-JDK-和-JRE-最详细通俗的解答" class="headerlink" title="1.1.2. 关于 JVM JDK 和 JRE 最详细通俗的解答"></a>1.1.2. 关于 JVM JDK 和 JRE 最详细通俗的解答</h4><h5 id="1-1-2-1-JVM"><a href="#1-1-2-1-JVM" class="headerlink" title="1.1.2.1. JVM"></a>1.1.2.1. JVM</h5><p>Java 虚拟机（JVM）是运行 Java 字节码的虚拟机。JVM 有针对不同系统的特定实现（Windows，Linux，macOS），目的是使用相同的字节码，它们都会给出相同的结果。</p>
 <p><strong>什么是字节码?采用字节码的好处是什么?</strong></p>
@@ -47,7 +47,7 @@
 </blockquote>
 <p><strong>总结：</strong></p>
 <ol>
-<li>Oracle JDK 大概每 6 个月发一次主要版本，而 OpenJDK 版本大概每三个月发布一次。但这不是固定的，我觉得了解这个没啥用处。详情参见：<a target="_blank" rel="noopener" href="https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence">https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence</a> 。</li>
+<li>Oracle JDK 大概每 6 个月发一次主要版本，而 OpenJDK 版本大概每三个月发布一次。但这不是固定的，我觉得了解这个没啥用处。详情参见：<a target="_blank" rel="noopener" href="https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence">blogs.oracle.com</a> 。</li>
 <li>OpenJDK 是一个参考模型并且是完全开源的，而 Oracle JDK 是 OpenJDK 的一个实现，并不是完全开源的；</li>
 <li>Oracle JDK 比 OpenJDK 更稳定。OpenJDK 和 Oracle JDK 的代码几乎相同，但 Oracle JDK 有更多的类和一些错误修复。因此，如果您想开发企业/商业软件，我建议您选择 Oracle JDK，因为它经过了彻底的测试和稳定。某些情况下，有些人提到在使用 OpenJDK 可能会遇到了许多应用程序崩溃的问题，但是，只需切换到 Oracle JDK 就可以解决问题；</li>
 <li>在响应性和 JVM 性能方面，Oracle JDK 与 OpenJDK 相比提供了更好的性能；</li>
@@ -60,7 +60,7 @@
 <li>Java 不提供指针来直接访问内存，程序内存更加安全</li>
 <li>Java 的类是单继承的，C++ 支持多重继承；虽然 Java 的类不可以多继承，但是接口可以多继承。</li>
 <li>Java 有自动内存管理垃圾回收机制(GC)，不需要程序员手动释放无用内存</li>
-<li><strong>在 C 语言中，字符串或字符数组最后都会有一个额外的字符<code>&#39;\0&#39;</code>来表示结束。但是，Java 语言中没有结束符这一概念。</strong> 这是一个值得深度思考的问题，具体原因推荐看这篇文章： <a target="_blank" rel="noopener" href="https://blog.csdn.net/sszgg2006/article/details/49148189">https://blog.csdn.net/sszgg2006/article/details/49148189</a></li>
+<li><strong>在 C 语言中，字符串或字符数组最后都会有一个额外的字符<code>&#39;\0&#39;</code>来表示结束。但是，Java 语言中没有结束符这一概念。</strong> 这是一个值得深度思考的问题，具体原因推荐看这篇文章： <a target="_blank" rel="noopener" href="https://blog.csdn.net/sszgg2006/article/details/49148189">details/49148189</a></li>
 </ul>
 <h4 id="1-1-5-import-java-和-javax-有什么区别？"><a href="#1-1-5-import-java-和-javax-有什么区别？" class="headerlink" title="1.1.5. import java 和 javax 有什么区别？"></a>1.1.5. import java 和 javax 有什么区别？</h4><p>刚开始的时候 JavaAPI 所必需的包是 java 开头的包，javax 当时只是扩展 API 包来使用。然而随着时间的推移，javax 逐渐地扩展成为 Java API 的组成部分。但是，将扩展从 javax 包移动到 java 包确实太麻烦了，最终会破坏一堆现有的代码。因此，最终决定 javax 包将成为标准 API 的一部分。</p>
 <p>所以，实际上 java 和 javax 没有区别。这都是一个名字。</p>
@@ -669,7 +669,7 @@
 <li>程序所在的线程死亡。</li>
 <li>关闭 CPU。</li>
 </ol>
-<p>下面这部分内容来自 issue:<a target="_blank" rel="noopener" href="https://github.com/Snailclimb/JavaGuide/issues/190">https://github.com/Snailclimb/JavaGuide/issues/190</a>。</p>
+<p>下面这部分内容来自 <a target="_blank" rel="noopener" href="https://github.com/Snailclimb/JavaGuide/issues/190">issue</a></p>
 <p><strong>注意：</strong> 当 try 语句和 finally 语句中都有 return 语句时，在方法返回之前，finally 语句的内容将被执行，并且 finally 语句的返回值将会覆盖原始的返回值。如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> value * value;</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (value == <span class="number">2</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如果调用 <code>f(2)</code>，返回值将是 0，因为 finally 语句的返回值覆盖了 try 语句块的返回值。</p>
@@ -723,11 +723,9 @@
 <li><strong>NIO (Non-blocking/New I/O):</strong> NIO 是一种同步非阻塞的 I/O 模型，在 Java 1.4 中引入了 NIO 框架，对应 java.nio 包，提供了 Channel , Selector，Buffer 等抽象。NIO 中的 N 可以理解为 Non-blocking，不单纯是 New。它支持面向缓冲的，基于通道的 I/O 操作方法。 NIO 提供了与传统 BIO 模型中的 <code>Socket</code> 和 <code>ServerSocket</code> 相对应的 <code>SocketChannel</code> 和 <code>ServerSocketChannel</code> 两种不同的套接字通道实现,两种通道都支持阻塞和非阻塞两种模式。阻塞模式使用就像传统中的支持一样，比较简单，但是性能和可靠性都不好；非阻塞模式正好与之相反。对于低负载、低并发的应用程序，可以使用同步阻塞 I/O 来提升开发速率和更好的维护性；对于高负载、高并发的（网络）应用，应使用 NIO 的非阻塞模式来开发</li>
 <li><strong>AIO (Asynchronous I/O):</strong> AIO 也就是 NIO 2。在 Java 7 中引入了 NIO 的改进版 NIO 2,它是异步非阻塞的 IO 模型。异步 IO 是基于事件和回调机制实现的，也就是应用操作之后会直接返回，不会堵塞在那里，当后台处理完成，操作系统会通知相应的线程进行后续的操作。AIO 是异步 IO 的缩写，虽然 NIO 在网络操作中，提供了非阻塞的方法，但是 NIO 的 IO 行为还是同步的。对于 NIO 来说，我们的业务线程是在 IO 操作准备好时，得到通知，接着就由这个线程自行进行 IO 操作，IO 操作本身是同步的。查阅网上相关资料，我发现就目前来说 AIO 的应用还不是很广泛，Netty 之前也尝试使用过 AIO，不过又放弃了。</li>
 </ul>
-<h2 id="4-参考"><a href="#4-参考" class="headerlink" title="4. 参考"></a>4. 参考</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/1906445/what-is-the-difference-between-jdk-and-jre">https://stackoverflow.com/questions/1906445/what-is-the-difference-between-jdk-and-jre</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.educba.com/oracle-vs-openjdk/">https://www.educba.com/oracle-vs-openjdk/</a></li>
-<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/22358071/differences-between-oracle-jdk-and-openjdk?answertab=active#tab-top">https://stackoverflow.com/questions/22358071/differences-between-oracle-jdk-and-openjdk?answertab=active#tab-top</a></li>
-</ul><div id="paginator"></div></div><div id="post-footer"><hr><a href="/2021/04/09/Java%E5%B8%B8%E8%A7%81%E5%85%B3%E9%94%AE%E5%AD%97%E6%80%BB%E7%BB%93/">← Prev Java常见关键字总结</a><span style="color: #fe2"> | </span><a href="/2021/01/29/%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%B9%E7%9A%84%E7%94%B2%E9%AA%A8%E6%96%87Oracle%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B%E5%8F%8A%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">永久免费的甲骨文oracle服务器注册教程及注意事项 Next →</a><hr></div><div id="bottom-btn"><a id="to-index" href="#post-index" title="index">≡</a><a id="to-top" href="#post-title" title="to top">∧</a></div><details id="reward"><summary>打赏</summary><div id="alipay"><span>支付宝 | Alipay</span><br><img src="/img/Alipay.png"></div><div id="wechat"><span>微信 | WeChat</span><br><img src="/img/WeChat.png"></div></details><div id="Valine"></div><script>new Valine({
+<h2 id="4-参考"><a href="#4-参考" class="headerlink" title="4. 参考"></a>4. 参考</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/1906445/what-is-the-difference-between-jdk-and-jre">stackoverflow.com</a><br><a target="_blank" rel="noopener" href="https://www.educba.com/oracle-vs-openjdk/">www.educba.com</a><br><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/22358071/differences-between-oracle-jdk-and-openjdk?answertab=active#tab-top">stackoverflow.com</a></p>
+</blockquote><div id="paginator"></div></div><div id="post-footer"><hr><a href="/2021/04/09/Java%E5%B8%B8%E8%A7%81%E5%85%B3%E9%94%AE%E5%AD%97%E6%80%BB%E7%BB%93/">← Prev Java常见关键字总结</a><span style="color: #fe2"> | </span><a href="/2021/01/29/%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%B9%E7%9A%84%E7%94%B2%E9%AA%A8%E6%96%87Oracle%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B%E5%8F%8A%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">永久免费的甲骨文oracle服务器注册教程及注意事项 Next →</a><hr></div><div id="bottom-btn"><a id="to-index" href="#post-index" title="index">≡</a><a id="to-top" href="#post-title" title="to top">∧</a></div><details id="reward"><summary>打赏</summary><div id="alipay"><span>支付宝 | Alipay</span><br><img src="/img/Alipay.png"></div><div id="wechat"><span>微信 | WeChat</span><br><img src="/img/WeChat.png"></div></details><div id="Valine"></div><script>new Valine({
  el: '#Valine'
  , appId: 'iimRpHPvB3n3J1iBrHEAk4lr-gzGzoHsz'
  , appKey: 'cv8sEd0lgm1AGe0MHAsYoK9e'
