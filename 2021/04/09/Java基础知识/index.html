@@ -5,8 +5,8 @@
 @font-face {
  font-family: 'JetBrains Mono';
  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
-}</style><meta name="generator" content="Hexo 5.3.0"></head><body><header><nav><a href="/">主页</a><a href="/archives/">归档</a></nav></header><main><article><div id="post-bg"><div id="post-title"><div id="post-info"><span>date:<time datetime="2021-04-09T06:55:48.000Z" id="date"> 2021-04-09</time></span><br><span>updated:<time datetime="2021-04-09T09:21:29.322Z" id="updated"> 2021-04-09</time></span></div><h1>Java基础知识</h1><hr></div><div id="post-content"><blockquote>
-<p><a target="_blank" rel="noopener" href="https://github.com/Snailclimb/JavaGuide/blob/09216a6916cfe94765919a17d93c22a5cc286c42/docs/java/basis/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md">原文地址</a>，此处仅作展示！</p>
+}</style><meta name="generator" content="Hexo 5.3.0"></head><body><header><nav><a href="/">主页</a><a href="/archives/">归档</a></nav></header><main><article><div id="post-bg"><div id="post-title"><div id="post-info"><span>date:<time datetime="2021-04-09T06:55:48.000Z" id="date"> 2021-04-09</time></span><br><span>updated:<time datetime="2021-04-20T07:03:42.399Z" id="updated"> 2021-04-20</time></span></div><h1>Java基础知识</h1><hr></div><div id="post-content"><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/Snailclimb/JavaGuide/blob/master/docs/java/basis/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md">原文地址</a>，此处仅作展示！</p>
 </blockquote>
 </li>
 </ol>
@@ -29,7 +29,7 @@
 <p>在 Java 中，JVM 可以理解的代码就叫做<code>字节码</code>（即扩展名为 <code>.class</code> 的文件），它不面向任何特定的处理器，只面向虚拟机。Java 语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了解释型语言可移植的特点。所以 Java 程序运行时比较高效，而且，由于字节码并不针对一种特定的机器，因此，Java 程序无须重新编译便可在多种不同操作系统的计算机上运行。</p>
 </blockquote>
 <p><strong>Java 程序从源代码到运行一般有下面 3 步：</strong></p>
-<p><img src="https://ae05.alicdn.com/kf/H4774a74cf4864ffbaa594da96c602ca8f.png" alt="Java程序运行过程"></p>
+<p><img src="https://inews.gtimg.com/newsapp_ls/0/13432921633/0" alt="Java程序运行过程"></p>
 <p>我们需要格外注意的是 .class-&gt;机器码 这一步。在这一步 JVM 类加载器首先加载字节码文件，然后通过解释器逐行解释执行，这种方式的执行速度会相对比较慢。而且，有些方法和代码块是经常需要被调用的(也就是所谓的热点代码)，所以后面引进了 JIT 编译器，而 JIT 属于运行时编译。当 JIT 编译器完成第一次编译后，其会将字节码对应的机器码保存下来，下次可以直接使用。而我们知道，机器码的运行效率肯定是高于 Java 解释器的。这也解释了我们为什么经常会说 Java 是编译与解释共存的语言。</p>
 <blockquote>
 <p>HotSpot 采用了惰性评估(Lazy Evaluation)的做法，根据二八定律，消耗大部分系统资源的只有那一小部分的代码（热点代码），而这也就是 JIT 所需要编译的部分。JVM 会根据代码每次被执行的情况收集信息并相应地做出一些优化，因此执行的次数越多，它的速度就越快。JDK 9 引入了一种新的编译模式 AOT(Ahead of Time Compilation)，它是直接将字节码编译成机器码，这样就避免了 JIT 预热等各方面的开销。JDK 支持分层编译和 AOT 协作使用。但是 ，AOT 编译器的编译质量是肯定比不上 JIT 编译器的。</p>
@@ -506,7 +506,7 @@
 <li><strong>浅拷贝</strong>：对基本数据类型进行值传递，对引用数据类型进行引用传递般的拷贝，此为浅拷贝。</li>
 <li><strong>深拷贝</strong>：对基本数据类型进行值传递，对引用数据类型，创建一个新的对象，并复制其内容，此为深拷贝。</li>
 </ol>
-<p><img src="https://ae05.alicdn.com/kf/H7f58b02fbc46486ab545309ccbc5c4f1P.png" alt="deep and shallow copy"></p>
+<p><img src="https://inews.gtimg.com/newsapp_ls/0/13432930088/0" alt="deep and shallow copy"></p>
 <h4 id="方法的四种类型"><a href="#方法的四种类型" class="headerlink" title="方法的四种类型"></a>方法的四种类型</h4><p>1、无参数无返回值的方法</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 无参数无返回值的方法(如果方法没有返回值，不能不写，必须写void，表示没有返回值)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;无参数无返回值的方法&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>2、有参数无返回值的方法</p>
@@ -647,7 +647,7 @@
 </ul>
 <p><strong>受检查异常</strong></p>
 <p>Java 代码在编译过程中，如果受检查异常没有被 <code>catch</code>/<code>throw</code> 处理的话，就没办法通过编译 。比如下面这段 IO 操作的代码。</p>
-<p><img src="https://ae05.alicdn.com/kf/Ha7b5841bd7a444e094997284e9f5df39E.png" alt="check-exception"></p>
+<p><img src="https://inews.gtimg.com/newsapp_ls/0/13432938454/0" alt="check-exception"></p>
 <p>除了<code>RuntimeException</code>及其子类以外，其他的<code>Exception</code>类及其子类都属于受检查异常 。常见的受检查异常有： IO 相关的异常、<code>ClassNotFoundException</code> 、<code>SQLException</code>…。</p>
 <p><strong>不受检查异常</strong></p>
 <p>Java 代码在编译过程中 ，我们即使不处理不受检查异常也可以正常通过编译。</p>
